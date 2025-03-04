@@ -2,7 +2,9 @@ import { useRouter } from 'expo-router';
 import React, { useEffect, useState } from "react";
 import { View, Text, Button, StyleSheet, FlatList, TouchableOpacity } from "react-native";
 import axios from "axios";
+import Constants from 'expo-constants';
 
+const API_URL = Constants.expoConfig?.extra?.API_URL;
 
 export default function Index() {
   const router = useRouter();
@@ -10,7 +12,7 @@ export default function Index() {
 
   useEffect(() => {
       axios
-      .get("http://10.0.2.2:5000/api/books")
+      .get(API_URL+"/books")
           .then((response) => setBooks(response.data))
           .catch((error) => console.error(error));
   }, []);
@@ -30,7 +32,7 @@ export default function Index() {
         </View>
         )}
       />
-      <Button title="Go to Setting" onPress={() => router.push('/(screens)/profile')} />;
+      <Button title="Go to Setting" onPress={() => router.push('/(screens)/profile')} />
     </View>
   );
 }
