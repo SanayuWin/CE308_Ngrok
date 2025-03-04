@@ -6,14 +6,14 @@ export default function TabLayout() {
   return (
     <Tabs
       screenOptions={{
-        tabBarActiveTintColor: '#ffd33d',
+        tabBarActiveTintColor: '#0de136',
         headerStyle: {
-          backgroundColor: '#25292e',
+          backgroundColor: '#c9fffb',
         },
         headerShadowVisible: false,
-        headerTintColor: '#fff',
+        headerTintColor: '#464646',
         tabBarStyle: {
-        backgroundColor: '#25292e',
+          backgroundColor: '#c9fffb',
         },
       }}
     >
@@ -27,14 +27,15 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
-        name="about"
+        name="create"
         options={{
-          title: 'About',
+          title: 'Create Book',
           tabBarIcon: ({ color, focused }) => (
             <Ionicons name={focused ? 'information-circle' : 'information-circle-outline'} color={color} size={24}/>
           ),
         }}
       />
+      
     </Tabs>
   );
 }

@@ -38,7 +38,7 @@
       "typedRoutes": true
     },
     "extra": {
-      "API_URL": "https://loud-trains-spend.loca.lt/api"
+      "API_URL": "https://four-buses-flash.loca.lt/api"
     }
   }
 }

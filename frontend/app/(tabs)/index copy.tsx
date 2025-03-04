@@ -37,8 +37,8 @@ export default function Index() {
       });
   };
 
-  // ฟังก์ชันเปิด modal เพื่อแก้ไขข้อมูล
-  const handleEdit = (book: any) => {
+   // ฟังก์ชันเปิด modal เพื่อแก้ไขข้อมูล
+   const handleEdit = (book: any) => {
     setSelectedBook(book);
     setModalVisible(true);
   };
@@ -157,6 +157,12 @@ const styles = StyleSheet.create({
   buttonText: {
     color: '#fff',
   },
+  editButton: {
+    backgroundColor: '#4caf50',
+    padding: 5,
+    marginTop: 10,
+    borderRadius: 5,
+  },
   deleteButton: {
     backgroundColor: '#ff4d4d',
     padding: 5,
@@ -166,12 +172,6 @@ const styles = StyleSheet.create({
   deleteText: {
     color: '#fff',
     fontWeight: 'bold',
-  },
-  editButton: {
-    backgroundColor: '#4caf50',
-    padding: 5,
-    marginTop: 10,
-    borderRadius: 5,
   },
   modalOverlay: {
     flex: 1,
